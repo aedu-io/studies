@@ -1,0 +1,41 @@
+---
+/Users/christina/Code/ltp/testcases/kernel/syscalls/abort/abort01.c:
+  "abort01.c":
+    defines:
+      - "MIN_RLIMIT_CORE":
+          type: macro definition
+          line: 65
+          protection: public
+      - "test":
+          type: variable
+          line: 67
+          protection: public
+      - "do_child()":
+          type: function
+          line: 27
+          protection: public
+          lines_of_code: 6
+          parameters: 0
+          conditional_paths: 1
+      - "verify_abort()":
+          type: function
+          line: 34
+          protection: public
+          lines_of_code: 30
+          parameters: 0
+          conditional_paths: 5
+          uses:
+            - "do_child()":
+                type: function
+                defined_in: "abort01.c"
+      - "setup(void)":
+          type: function
+          line: 67
+          protection: public
+          lines_of_code: 11
+          parameters: 1
+          conditional_paths: 2
+          uses:
+            - "MIN_RLIMIT_CORE":
+                type: macro definition
+                defined_in: "abort01.c"
